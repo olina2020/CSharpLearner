@@ -55,26 +55,160 @@ namespace Itcast20200317
             //Console.WriteLine("小明应该付的钱是{0}，打8.8折后的价格是{1}", total, afterDiscount);
             #endregion
 
+            #region 判断X天是几周零几天，判断X秒是几天几分几秒
             //int days = 46;
             //int week = days /7;
             //int rest = days % 7;
             //Console.WriteLine("是{0}周, 零{1}天", week, rest);
 
-            int seconds = 107653;
-            int days = seconds / 86400;
-            int secs = seconds % 86400;
-            int hours = secs / 3600;
-            secs = secs % 3600;
-            int minutes = secs / 60;
-            secs = secs % 60;
-            Console.WriteLine("{0}秒是{1}天，{2}个小时，{3}分钟, {4}秒", seconds, days, hours, minutes, secs);
+            //int seconds = 107653;
+            //int days = seconds / 86400;
+            //int secs = seconds % 86400;
+            //int hours = secs / 3600;
+            //secs = secs % 3600;
+            //int minutes = secs / 60;
+            //secs = secs % 60;
+            //Console.WriteLine("{0}秒是{1}天，{2}个小时，{3}分钟, {4}秒", seconds, days, hours, minutes, secs);
 
             //Console.WriteLine("Please enter a number of day");
-            //int days =Convert.ToInt32(Console.ReadLine());
+            //int days = Convert.ToInt32(Console.ReadLine());
             //int week = days / 7;
             //int rest = days % 7;
-            //Console.WriteLine("是{0}周, 零{1}天", week, rest); 
+            //Console.WriteLine("是{0}周, 零{1}天", week, rest);
+            #endregion
 
+            #region 请用户输入一个年份，判断是否闰年
+            /*Console.WriteLine("请输入需要判断闰年的年份");
+            int year = Convert.ToInt32(Console.ReadLine());
+            bool b = (year % 400 == 0) || (year % 100 != 0 && year % 4 == 0);
+            Console.WriteLine(b);*/
+            #endregion
+
+            #region 老苏的奖励
+            //Console.WriteLine("Please enter your chinese score");
+            //int chinese = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Please enter your music score");
+            //int music = Convert.ToInt32(Console.ReadLine());
+            //bool b = (chinese > 90 && music > 80) || (chinese == 100 && music > 70);
+            //if (b)
+            //{
+            //    Console.WriteLine("You could obtain $100.");
+            //}
+            #endregion
+
+            #region 输入用户名和密码
+            //Console.WriteLine("Please enter your ID.");
+            //string id = Console.ReadLine();
+            //Console.WriteLine("Please enter your password.");
+            //string pw = Console.ReadLine();
+            //bool b = (id == "admin") && (pw == "mypass");
+            //if (b)
+            //{
+            //    Console.WriteLine("Login successfully.");
+            //}
+            #endregion
+
+            #region 使用if结构判断分数等级
+            //Console.WriteLine("Please enter your score.");
+            //int score = Convert.ToInt32(Console.ReadLine());
+            //if (score >= 90)
+            //{
+            //    Console.WriteLine("A");
+            //}
+            //if (score < 90 && score >= 80)
+            //{
+            //    Console.WriteLine("B");
+            //}
+            //if (score < 80 && score >= 70)
+            //{
+            //    Console.WriteLine("C");
+            //}
+            //if (score < 70 && score >= 60)
+            //{
+            //    Console.WriteLine("D");
+            //}
+            //if (score<60)
+            //{
+            //    Console.WriteLine("E");
+            //}
+            #endregion
+            #region 使用if else 判断分数等级，多级嵌套，不推荐
+            //Console.WriteLine("Please enter your score.");
+            //int score = Convert.ToInt32(Console.ReadLine());
+            //if (score >= 90)
+            //{
+            //    Console.WriteLine("A");
+            //}
+            //else
+            //{
+            //    if (score >= 80)
+            //    {
+            //        Console.WriteLine("B");
+            //    }
+            //    else
+            //    {
+            //        if (score >= 70)
+            //        {
+            //            Console.WriteLine("C");
+            //        }
+            //        else
+            //        {
+            //            if (score >= 60)
+            //            {
+            //                Console.WriteLine("D");
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("E");
+            //            }
+            //        }
+            //    }
+            //}
+            #endregion
+            #region 最正确的做法，使用 if else-if 来做
+            //Console.WriteLine("Please enter your score.");
+            //int score = Convert.ToInt32(Console.ReadLine());
+            //if (score >= 90)
+            //{
+            //    Console.WriteLine("A");
+            //}
+            //else if (score >= 80)
+            //{
+            //    Console.WriteLine("B");
+            //}
+            //else if (score >= 70)
+            //{
+            //    Console.WriteLine("C");
+            //}
+            //else if (score >= 60)
+            //{
+            //    Console.WriteLine("D");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("E");
+            //}
+            #endregion
+            #region 请客人输入三个数，输出最大的那个
+            //Console.WriteLine("Please enter the first number");
+            //int n1 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Please enter the second number");
+            //int n2 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Please enter the third number");
+            //int n3 = Convert.ToInt32(Console.ReadLine());
+            //if (n1 > n2 && n1 > n3)
+            //{
+            //    Console.WriteLine(n1);
+            //}
+            //else if (n2 > n1 && n2 > n3)
+            //{
+            //    Console.WriteLine(n2);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(n3);
+            //}
+            #endregion
 
 
 

@@ -1,0 +1,11 @@
+D:\Codes\Itcast20200317\Itcast20200317\bin\Debug\netcoreapp3.1\Itcast20200317.exe
+D:\Codes\Itcast20200317\Itcast20200317\bin\Debug\netcoreapp3.1\Itcast20200317.deps.json
+D:\Codes\Itcast20200317\Itcast20200317\bin\Debug\netcoreapp3.1\Itcast20200317.runtimeconfig.json
+D:\Codes\Itcast20200317\Itcast20200317\bin\Debug\netcoreapp3.1\Itcast20200317.runtimeconfig.dev.json
+D:\Codes\Itcast20200317\Itcast20200317\bin\Debug\netcoreapp3.1\Itcast20200317.dll
+D:\Codes\Itcast20200317\Itcast20200317\bin\Debug\netcoreapp3.1\Itcast20200317.pdb
+D:\Codes\Itcast20200317\Itcast20200317\obj\Debug\netcoreapp3.1\Itcast20200317.csprojAssemblyReference.cache
+D:\Codes\Itcast20200317\Itcast20200317\obj\Debug\netcoreapp3.1\Itcast20200317.AssemblyInfoInputs.cache
+D:\Codes\Itcast20200317\Itcast20200317\obj\Debug\netcoreapp3.1\Itcast20200317.AssemblyInfo.cs
+D:\Codes\Itcast20200317\Itcast20200317\obj\Debug\netcoreapp3.1\Itcast20200317.dll
+D:\Codes\Itcast20200317\Itcast20200317\obj\Debug\netcoreapp3.1\Itcast20200317.pdb

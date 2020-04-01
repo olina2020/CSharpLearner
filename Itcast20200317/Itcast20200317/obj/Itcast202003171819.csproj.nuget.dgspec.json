@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Codes\\Itcast20200317\\Itcast20200317\\Itcast202003171819.csproj": {}
+  },
+  "projects": {
+    "D:\\Codes\\Itcast20200317\\Itcast20200317\\Itcast202003171819.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Codes\\Itcast20200317\\Itcast20200317\\Itcast202003171819.csproj",
+        "projectName": "Itcast202003171819",
+        "projectPath": "D:\\Codes\\Itcast20200317\\Itcast20200317\\Itcast202003171819.csproj",
+        "packagesPath": "C:\\Users\\Gilbert\\.nuget\\packages\\",
+        "outputPath": "D:\\Codes\\Itcast20200317\\Itcast20200317\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Gilbert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
