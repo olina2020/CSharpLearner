@@ -1,0 +1,12 @@
+C:\Users\Gilbert\source\repos\ItcastCater724\CaterCommon\bin\Debug\CaterCommon.dll
+C:\Users\Gilbert\source\repos\ItcastCater724\CaterCommon\bin\Debug\CaterCommon.pdb
+C:\Users\Gilbert\source\repos\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csprojAssemblyReference.cache
+C:\Users\Gilbert\source\repos\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csproj.CoreCompileInputs.cache
+C:\Users\Gilbert\source\repos\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.dll
+C:\Users\Gilbert\source\repos\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.pdb
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\bin\Debug\CaterCommon.dll
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\bin\Debug\CaterCommon.pdb
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csprojAssemblyReference.cache
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csproj.CoreCompileInputs.cache
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.dll
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.pdb
