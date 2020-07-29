@@ -14,9 +14,19 @@ namespace CaterUI
 {
     public partial class FormManagerInfo : Form
     {
-        public FormManagerInfo()
+        private FormManagerInfo()
         {
             InitializeComponent();
+        }
+        //实现窗体的单例
+        private static FormManagerInfo _form;
+        public static FormManagerInfo Create()
+        {
+            if (_form==null)
+            {
+                _form = new FormManagerInfo();                
+            }
+            return _form;
         }
         //创建业务逻辑层对象
         ManagerInfoBll miBll = new ManagerInfoBll();
@@ -140,6 +150,13 @@ namespace CaterUI
             {
                 MessageBox.Show("请选择想要删除的行");
             }
+        }
+
+        private void FormManagerInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //与单例保持一致
+            //出现这种代码的原因：Form的Close会释放当前窗体对象
+            _form = null;//关闭form时，资源被释放，同时变量也不指向谁
         }
     }
 }

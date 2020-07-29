@@ -42,3 +42,5 @@ C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.csproj.CopyCompl
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.exe
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.pdb
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormMain.resources
+C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormMemberInfo.resources
+C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormMemberTypeInfo.resources

@@ -29,12 +29,14 @@ namespace CaterUI
             //获取用户输入的信息
             string name = txtName.Text;
             string pwd = txtPwd.Text;
+            int type;
             ManagerInfoBll miBll = new ManagerInfoBll();
-            LoginState loginState = miBll.Login(name, pwd);
+            LoginState loginState = miBll.Login(name, pwd, out type);
             switch (loginState)
             {
                 case LoginState.Ok:
                     FormMain main = new FormMain();
+                    main.Tag = type;//将员工级别传递过去
                     main.Show();
                     //讲登录窗体隐藏
                     this.Hide();
@@ -46,6 +48,11 @@ namespace CaterUI
                     MessageBox.Show("密码错误");
                     break;               
             }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

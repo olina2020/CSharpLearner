@@ -90,6 +90,7 @@
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.Text = "登录";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
