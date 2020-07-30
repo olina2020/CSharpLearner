@@ -11,3 +11,16 @@ C:\Users\Gilbert\source\repos\ItcastCater724\01复习\obj\Debug\01复习.csproj.
 C:\Users\Gilbert\source\repos\ItcastCater724\01复习\obj\Debug\01复习.csproj.CopyComplete
 C:\Users\Gilbert\source\repos\ItcastCater724\01复习\obj\Debug\01复习.exe
 C:\Users\Gilbert\source\repos\ItcastCater724\01复习\obj\Debug\01复习.pdb
+C:\Codes\CSharpLearner\ItcastCater724\01复习\bin\Debug\01复习.exe.config
+C:\Codes\CSharpLearner\ItcastCater724\01复习\bin\Debug\01复习.exe
+C:\Codes\CSharpLearner\ItcastCater724\01复习\bin\Debug\01复习.pdb
+C:\Codes\CSharpLearner\ItcastCater724\01复习\bin\Debug\System.Data.SQLite.dll
+C:\Codes\CSharpLearner\ItcastCater724\01复习\bin\Debug\System.Data.SQLite.xml
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\01复习.csprojAssemblyReference.cache
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\_01复习.Form1.resources
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\_01复习.Properties.Resources.resources
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\01复习.csproj.GenerateResource.cache
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\01复习.csproj.CoreCompileInputs.cache
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\01复习.csproj.CopyComplete
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\01复习.exe
+C:\Codes\CSharpLearner\ItcastCater724\01复习\obj\Debug\01复习.pdb

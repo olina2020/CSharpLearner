@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCancle = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNameAdd = new System.Windows.Forms.TextBox();
+            this.txtMoney = new System.Windows.Forms.TextBox();
+            this.txtPhoneAdd = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -44,9 +43,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtSName = new System.Windows.Forms.TextBox();
+            this.btnSearchAll = new System.Windows.Forms.Button();
+            this.txtPhoneSearch = new System.Windows.Forms.TextBox();
+            this.txtNameSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,38 +58,41 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ddlType = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // btnDelete
             // 
-            this.button5.Location = new System.Drawing.Point(10, 315);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(236, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "删除选中的行数据";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(10, 315);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(236, 26);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "删除选中的行数据";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnCancle
             // 
-            this.button4.Location = new System.Drawing.Point(151, 275);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "取消";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCancle.Location = new System.Drawing.Point(151, 275);
+            this.btnCancle.Name = "btnCancle";
+            this.btnCancle.Size = new System.Drawing.Size(75, 23);
+            this.btnCancle.TabIndex = 6;
+            this.btnCancle.Text = "取消";
+            this.btnCancle.UseVisualStyleBackColor = true;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.Location = new System.Drawing.Point(35, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "添加";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(35, 275);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "添加";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button2
             // 
@@ -101,40 +103,34 @@
             this.button2.Text = "类型管理";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtNameAdd
             // 
-            this.textBox5.Location = new System.Drawing.Point(75, 124);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 22);
-            this.textBox5.TabIndex = 4;
+            this.txtNameAdd.Location = new System.Drawing.Point(75, 85);
+            this.txtNameAdd.Name = "txtNameAdd";
+            this.txtNameAdd.Size = new System.Drawing.Size(176, 22);
+            this.txtNameAdd.TabIndex = 4;
             // 
-            // textBox4
+            // txtMoney
             // 
-            this.textBox4.Location = new System.Drawing.Point(75, 85);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 22);
-            this.textBox4.TabIndex = 4;
+            this.txtMoney.Location = new System.Drawing.Point(75, 232);
+            this.txtMoney.Name = "txtMoney";
+            this.txtMoney.Size = new System.Drawing.Size(176, 22);
+            this.txtMoney.TabIndex = 4;
             // 
-            // textBox7
+            // txtPhoneAdd
             // 
-            this.textBox7.Location = new System.Drawing.Point(75, 232);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(176, 22);
-            this.textBox7.TabIndex = 4;
+            this.txtPhoneAdd.Location = new System.Drawing.Point(75, 204);
+            this.txtPhoneAdd.Name = "txtPhoneAdd";
+            this.txtPhoneAdd.Size = new System.Drawing.Size(176, 22);
+            this.txtPhoneAdd.TabIndex = 4;
             // 
-            // textBox6
+            // txtId
             // 
-            this.textBox6.Location = new System.Drawing.Point(75, 204);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 22);
-            this.textBox6.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(75, 43);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtId.Location = new System.Drawing.Point(75, 43);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(176, 22);
+            this.txtId.TabIndex = 4;
+            this.txtId.Text = "添加时无编号";
             // 
             // label8
             // 
@@ -183,15 +179,15 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.ddlType);
+            this.groupBox3.Controls.Add(this.btnDelete);
+            this.groupBox3.Controls.Add(this.btnCancle);
+            this.groupBox3.Controls.Add(this.btnSave);
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txtNameAdd);
+            this.groupBox3.Controls.Add(this.txtMoney);
+            this.groupBox3.Controls.Add(this.txtPhoneAdd);
+            this.groupBox3.Controls.Add(this.txtId);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label10);
@@ -214,28 +210,31 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "添加\\修改";
             // 
-            // button1
+            // btnSearchAll
             // 
-            this.button1.Location = new System.Drawing.Point(16, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 26);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "显示全部";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearchAll.Location = new System.Drawing.Point(16, 101);
+            this.btnSearchAll.Name = "btnSearchAll";
+            this.btnSearchAll.Size = new System.Drawing.Size(236, 26);
+            this.btnSearchAll.TabIndex = 4;
+            this.btnSearchAll.Text = "显示全部";
+            this.btnSearchAll.UseVisualStyleBackColor = true;
+            this.btnSearchAll.Click += new System.EventHandler(this.btnSearchAll_Click);
             // 
-            // textBox2
+            // txtPhoneSearch
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtPhoneSearch.Location = new System.Drawing.Point(75, 73);
+            this.txtPhoneSearch.Name = "txtPhoneSearch";
+            this.txtPhoneSearch.Size = new System.Drawing.Size(176, 22);
+            this.txtPhoneSearch.TabIndex = 3;
+            this.txtPhoneSearch.Leave += new System.EventHandler(this.txtPhoneSearch_Leave);
             // 
-            // txtSName
+            // txtNameSearch
             // 
-            this.txtSName.Location = new System.Drawing.Point(75, 37);
-            this.txtSName.Name = "txtSName";
-            this.txtSName.Size = new System.Drawing.Size(176, 22);
-            this.txtSName.TabIndex = 2;
+            this.txtNameSearch.Location = new System.Drawing.Point(75, 37);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.Size = new System.Drawing.Size(176, 22);
+            this.txtNameSearch.TabIndex = 2;
+            this.txtNameSearch.TextChanged += new System.EventHandler(this.txtNameSearch_TextChanged);
             // 
             // label4
             // 
@@ -341,9 +340,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.txtSName);
+            this.groupBox2.Controls.Add(this.btnSearchAll);
+            this.groupBox2.Controls.Add(this.txtPhoneSearch);
+            this.groupBox2.Controls.Add(this.txtNameSearch);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(755, 45);
@@ -362,6 +361,14 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // ddlType
+            // 
+            this.ddlType.FormattingEnabled = true;
+            this.ddlType.Location = new System.Drawing.Point(75, 124);
+            this.ddlType.Name = "ddlType";
+            this.ddlType.Size = new System.Drawing.Size(176, 24);
+            this.ddlType.TabIndex = 7;
             // 
             // FormMemberInfo
             // 
@@ -389,15 +396,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnCancle;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNameAdd;
+        private System.Windows.Forms.TextBox txtMoney;
+        private System.Windows.Forms.TextBox txtPhoneAdd;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
@@ -405,9 +411,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txtSName;
+        private System.Windows.Forms.Button btnSearchAll;
+        private System.Windows.Forms.TextBox txtPhoneSearch;
+        private System.Windows.Forms.TextBox txtNameSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -420,5 +426,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ComboBox ddlType;
     }
 }
