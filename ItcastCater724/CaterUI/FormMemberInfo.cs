@@ -49,6 +49,11 @@ namespace CaterUI
             //根据条件进行查询
             dgvList.AutoGenerateColumns = false;
             dgvList.DataSource = miBll.GetList(dic);
+            //设置某行选中
+            if (dgvSelectedIndex>-1)
+            {
+                dgvList.Rows[dgvSelectedIndex].Selected = true;
+            }           
         }
         private void LoadTypeList()
         {
@@ -118,6 +123,15 @@ namespace CaterUI
             else
             {
                 //修改
+                mi.MId = int.Parse(txtId.Text);
+                if (miBll.Edit(mi))
+                {
+                    LoadList();
+                }
+                else
+                {
+                    MessageBox.Show("修改失败，请稍后重试");
+                }
             }
             //恢复控件的值
             txtId.Text = "添加时无编号";
@@ -137,6 +151,51 @@ namespace CaterUI
             txtMoney.Text = "";
             ddlType.SelectedIndex = 0;//第一项被选中
             btnSave.Text = "添加";
+        }
+        private int dgvSelectedIndex = -1;//设置选中行
+        private void dgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvSelectedIndex = e.RowIndex;
+            //获取点击的行
+            var row= dgvList.Rows[e.RowIndex];
+            //将行中的数据显示到控件上
+            txtId.Text = row.Cells[0].Value.ToString();
+            txtNameAdd.Text = row.Cells[1].Value.ToString();
+            ddlType.Text = row.Cells[2].Value.ToString();
+            txtPhoneAdd.Text = row.Cells[3].Value.ToString();
+            txtMoney.Text = row.Cells[4].Value.ToString();
+            btnSave.Text = "修改";
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int id =Convert.ToInt32(dgvList.SelectedRows[0].Cells[0].Value);
+            DialogResult result = MessageBox.Show("确定要删除吗？", "提示", MessageBoxButtons.OKCancel);
+            if (result==DialogResult.Cancel)
+            {
+                return;
+            }
+            if (miBll.Remove(id))
+            {
+                LoadList();
+            }
+            else
+            {
+                MessageBox.Show("删除失败，请稍后重试");
+            }
+        }
+
+        private void btnAddType_Click(object sender, EventArgs e)
+        {
+            FormMemberTypeInfo formMti = new FormMemberTypeInfo();
+            //以模态窗口打开分类管理
+            DialogResult result= formMti.ShowDialog();
+            //根据返回的值，判断是否要更新下拉列表
+            if (result==DialogResult.OK)
+            {
+                LoadTypeList();
+                LoadList();
+            }
         }
     }
 }

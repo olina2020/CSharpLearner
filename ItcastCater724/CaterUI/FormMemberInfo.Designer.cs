@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddType = new System.Windows.Forms.Button();
             this.txtNameAdd = new System.Windows.Forms.TextBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
             this.txtPhoneAdd = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ddlType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearchAll = new System.Windows.Forms.Button();
             this.txtPhoneSearch = new System.Windows.Forms.TextBox();
@@ -58,21 +59,21 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ddlType = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnDelete
+            // btnRemove
             // 
-            this.btnDelete.Location = new System.Drawing.Point(10, 315);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(236, 26);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "删除选中的行数据";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(10, 315);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(236, 26);
+            this.btnRemove.TabIndex = 4;
+            this.btnRemove.Text = "删除选中的行数据";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnCancle
             // 
@@ -94,14 +95,15 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // btnAddType
             // 
-            this.button2.Location = new System.Drawing.Point(75, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "类型管理";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddType.Location = new System.Drawing.Point(75, 167);
+            this.btnAddType.Name = "btnAddType";
+            this.btnAddType.Size = new System.Drawing.Size(176, 23);
+            this.btnAddType.TabIndex = 5;
+            this.btnAddType.Text = "类型管理";
+            this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
             // 
             // txtNameAdd
             // 
@@ -180,10 +182,10 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.ddlType);
-            this.groupBox3.Controls.Add(this.btnDelete);
+            this.groupBox3.Controls.Add(this.btnRemove);
             this.groupBox3.Controls.Add(this.btnCancle);
             this.groupBox3.Controls.Add(this.btnSave);
-            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.btnAddType);
             this.groupBox3.Controls.Add(this.txtNameAdd);
             this.groupBox3.Controls.Add(this.txtMoney);
             this.groupBox3.Controls.Add(this.txtPhoneAdd);
@@ -200,6 +202,14 @@
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
+            // 
+            // ddlType
+            // 
+            this.ddlType.FormattingEnabled = true;
+            this.ddlType.Location = new System.Drawing.Point(75, 124);
+            this.ddlType.Name = "ddlType";
+            this.ddlType.Size = new System.Drawing.Size(176, 24);
+            this.ddlType.TabIndex = 7;
             // 
             // label5
             // 
@@ -290,8 +300,10 @@
             this.dgvList.ReadOnly = true;
             this.dgvList.RowHeadersWidth = 51;
             this.dgvList.RowTemplate.Height = 24;
+            this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(721, 529);
             this.dgvList.TabIndex = 0;
+            this.dgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellDoubleClick);
             // 
             // Column1
             // 
@@ -362,14 +374,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // ddlType
-            // 
-            this.ddlType.FormattingEnabled = true;
-            this.ddlType.Location = new System.Drawing.Point(75, 124);
-            this.ddlType.Name = "ddlType";
-            this.ddlType.Size = new System.Drawing.Size(176, 24);
-            this.ddlType.TabIndex = 7;
-            // 
             // FormMemberInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -396,10 +400,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddType;
         private System.Windows.Forms.TextBox txtNameAdd;
         private System.Windows.Forms.TextBox txtMoney;
         private System.Windows.Forms.TextBox txtPhoneAdd;

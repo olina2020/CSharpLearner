@@ -18,7 +18,9 @@ namespace CaterUI
         {
             InitializeComponent();
         }
+        //调用业务逻辑层对象
         MemberTypeInfoBll mtiBll = new MemberTypeInfoBll();
+        private DialogResult result = DialogResult.Cancel;
         private void FormMemberTypeInfo_Load(object sender, EventArgs e)
         {
             LoadList();
@@ -29,18 +31,28 @@ namespace CaterUI
             dgvList.AutoGenerateColumns = false;
             dgvList.DataSource=mtiBll.GetList();
         }
-
+        private void dgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //点击datagridview中的某一行，获取点击的行
+            var row = dgvList.Rows[e.RowIndex];
+            //将行中列的值赋给文本框
+            txtId.Text = row.Cells[0].Value.ToString();
+            txtTitle.Text = row.Cells[1].Value.ToString();
+            txtDiscount.Text = row.Cells[2].Value.ToString();
+            btnSave.Text = "修改";           
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //接收用户输入的值，构造对象
+            MemberTypeInfo mti = new MemberTypeInfo()
+            {
+                MTitle = txtTitle.Text,
+                MDiscount = Convert.ToDecimal(txtDiscount.Text)
+            };
             if (txtId.Text.Equals("添加时无编号"))
             {
                 //添加
-                //接收用户输入的值，构造对象
-                MemberTypeInfo mti = new MemberTypeInfo()
-                {
-                    MTitle = txtTitle.Text,
-                    MDiscount = Convert.ToDecimal(txtDiscount.Text)
-                };
+                
                 //调用添加方法
                 if (mtiBll.Add(mti))
                 {
@@ -54,14 +66,26 @@ namespace CaterUI
             else
             {
                 //修改
+                mti.MId = int.Parse(txtId.Text);
+                //调用修改的方法
+                if (mtiBll.Edit(mti))
+                {
+                    LoadList();
+                }
+                else
+                {
+                    MessageBox.Show("修改失败，请稍后重试");
+                }
+                
             }
             //将控件还原
             txtId.Text = "添加时无编号";
             txtTitle.Text = "";
             txtDiscount.Text = "";
             btnSave.Text = "添加";
+            result = DialogResult.OK;
         }
-
+          
         private void btnCancel_Click(object sender, EventArgs e)
         {
             txtId.Text = "添加时无编号";
@@ -91,6 +115,22 @@ namespace CaterUI
             {
                 MessageBox.Show("删除失败，请稍后重试");
             }
+            result = DialogResult.OK;
+        }
+
+        private void txtDiscount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMemberTypeInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = result;
         }
     }
 }

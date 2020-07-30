@@ -79,6 +79,7 @@
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(531, 331);
             this.dgvList.TabIndex = 0;
+            this.dgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellDoubleClick);
             // 
             // Column1
             // 
@@ -180,6 +181,7 @@
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(176, 22);
             this.txtDiscount.TabIndex = 4;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             // 
             // txtTitle
             // 
@@ -187,6 +189,7 @@
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(176, 22);
             this.txtTitle.TabIndex = 4;
+            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // txtId
             // 
@@ -243,6 +246,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormMemberTypeInfo";
             this.Text = "会员分类管理";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMemberTypeInfo_FormClosing);
             this.Load += new System.EventHandler(this.FormMemberTypeInfo_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

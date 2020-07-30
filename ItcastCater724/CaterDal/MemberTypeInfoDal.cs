@@ -43,6 +43,18 @@ namespace CaterDal
             //执行
             return SqliteHelper.ExecuteNonQuery(sql, ps);
         }
+        //修改
+        public int Update(MemberTypeInfo mti)
+        {
+            string sql = "update MemberTypeInfo set mtitle=@title, mdiscount=@discount where mid=@id";
+            SQLiteParameter[] ps =
+            {
+                new SQLiteParameter("@title", mti.MTitle),
+                new SQLiteParameter("@discount", mti.MDiscount),
+                new SQLiteParameter("@id", mti.MId)
+            };
+            return SqliteHelper.ExecuteNonQuery(sql, ps);
+        }
         //删除
         public int Delete(int id)
         {
