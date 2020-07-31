@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaterBll;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace CaterUI
         public FormDishInfo()
         {
             InitializeComponent();
+        }
+        private DishInfoBll diBll = new DishInfoBll();
+
+        private void FormDishInfo_Load(object sender, EventArgs e)
+        {
+            LoadList();
+        }
+        private void LoadList()
+        {
+            dgvList.AutoGenerateColumns = false;
+            dgvList.DataSource = diBll.GetList();
         }
     }
 }
