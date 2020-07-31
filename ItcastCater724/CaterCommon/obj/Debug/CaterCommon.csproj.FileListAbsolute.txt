@@ -10,3 +10,6 @@ C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csprojAs
 C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csproj.CoreCompileInputs.cache
 C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.dll
 C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.pdb
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\bin\Debug\ChnCharInfo.dll
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\bin\Debug\ChnCharInfo.xml
+C:\Codes\CSharpLearner\ItcastCater724\CaterCommon\obj\Debug\CaterCommon.csproj.CopyComplete

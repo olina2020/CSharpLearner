@@ -28,3 +28,5 @@ C:\Codes\CSharpLearner\ItcastCater724\CaterBll\obj\Debug\CaterBll.csproj.CoreCom
 C:\Codes\CSharpLearner\ItcastCater724\CaterBll\obj\Debug\CaterBll.csproj.CopyComplete
 C:\Codes\CSharpLearner\ItcastCater724\CaterBll\obj\Debug\CaterBll.dll
 C:\Codes\CSharpLearner\ItcastCater724\CaterBll\obj\Debug\CaterBll.pdb
+C:\Codes\CSharpLearner\ItcastCater724\CaterBll\bin\Debug\ChnCharInfo.dll
+C:\Codes\CSharpLearner\ItcastCater724\CaterBll\bin\Debug\ChnCharInfo.xml
