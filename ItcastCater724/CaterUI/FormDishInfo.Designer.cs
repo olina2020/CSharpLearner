@@ -59,6 +59,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnAddType = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -220,6 +221,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnAddType);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.btnCancle);
             this.groupBox3.Controls.Add(this.btnSave);
@@ -286,7 +288,7 @@
             this.cbbType.Location = new System.Drawing.Point(96, 104);
             this.cbbType.Name = "cbbType";
             this.cbbType.Size = new System.Drawing.Size(167, 24);
-            this.cbbType.TabIndex = 5;
+            this.cbbType.TabIndex = 5;          
             // 
             // txtPinyin
             // 
@@ -372,6 +374,16 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "添加\\修改";
             // 
+            // btnAddType
+            // 
+            this.btnAddType.Location = new System.Drawing.Point(95, 145);
+            this.btnAddType.Name = "btnAddType";
+            this.btnAddType.Size = new System.Drawing.Size(167, 23);
+            this.btnAddType.TabIndex = 10;
+            this.btnAddType.Text = "分类管理";
+            this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
+            // 
             // FormDishInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -428,5 +440,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.ComboBox ddlTypeSearch;
+        private System.Windows.Forms.Button btnAddType;
     }
 }

@@ -21,6 +21,7 @@ namespace CaterUI
         DishTypeInfoBll dtiBll = new DishTypeInfoBll();
         //设置一个全局变量，并赋初始值
         private int rowIndex = -1;
+        private DialogResult result = DialogResult.Cancel;
         private void FormDishTypeInfo_Load(object sender, EventArgs e)
         {
             LoadList();
@@ -77,6 +78,8 @@ namespace CaterUI
             txtId.Text = "添加时无编号";
             txtTitle.Text = "";
             btnSave.Text = "添加";
+
+            this.result = DialogResult.OK;
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
@@ -118,7 +121,13 @@ namespace CaterUI
             else
             {
                 MessageBox.Show("删除失败，请稍后重试");
-            }            
+            }
+            this.result = DialogResult.OK;
+        }
+
+        private void FormDishTypeInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DialogResult = this.result;
         }
     }
 }

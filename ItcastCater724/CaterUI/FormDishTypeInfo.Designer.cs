@@ -213,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormDishTypeInfo";
             this.Text = "菜品类型管理";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDishTypeInfo_FormClosing);
             this.Load += new System.EventHandler(this.FormDishTypeInfo_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();

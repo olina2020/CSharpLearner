@@ -154,5 +154,15 @@ namespace CaterUI
             txtPinyin.Text = row.Cells[4].Value.ToString();
             btnSave.Text = "修改";
         }
+        private void btnAddType_Click(object sender, EventArgs e)
+        {
+            FormDishTypeInfo formDti = new FormDishTypeInfo();
+            DialogResult result = formDti.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                LoadTypeList();
+                LoadList();
+            }
+        }
     }
 }
