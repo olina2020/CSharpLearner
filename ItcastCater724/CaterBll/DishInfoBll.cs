@@ -12,9 +12,19 @@ namespace CaterBll
     {
         private DishInfoDal diDal = new DishInfoDal();
         //查询
-        public List<DishInfo> GetList()
+        public List<DishInfo> GetList(Dictionary<string, string> dic)
         {
-            return diDal.GetList();
+            return diDal.GetList(dic);
+        }
+        //添加
+        public bool Add(DishInfo di)
+        {
+            return diDal.Insert(di) > 0;
+        }
+        //修改
+        public bool Edit(DishInfo di)
+        {
+            return diDal.Update(di) > 0;
         }
     }
 }

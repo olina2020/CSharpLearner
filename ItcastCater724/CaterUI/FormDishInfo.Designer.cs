@@ -30,11 +30,16 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnShowAll = new System.Windows.Forms.Button();
-            this.txtTypeSearch = new System.Windows.Forms.TextBox();
-            this.txtNameSearch = new System.Windows.Forms.TextBox();
+            this.ddlTypeSearch = new System.Windows.Forms.ComboBox();
+            this.btnSearchAll = new System.Windows.Forms.Button();
+            this.txtTitleSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,11 +59,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -91,8 +91,55 @@
             this.dgvList.ReadOnly = true;
             this.dgvList.RowHeadersWidth = 51;
             this.dgvList.RowTemplate.Height = 24;
+            this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(661, 512);
             this.dgvList.TabIndex = 0;
+            this.dgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvList_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "DId";
+            this.Column1.HeaderText = "编号";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "DTitle";
+            this.Column2.HeaderText = "名称";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "DTypeTitle";
+            this.Column3.HeaderText = "分类";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "DPrice";
+            this.Column4.HeaderText = "价格";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "DChar";
+            this.Column5.HeaderText = "拼音";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // label1
             // 
@@ -105,9 +152,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnShowAll);
-            this.groupBox2.Controls.Add(this.txtTypeSearch);
-            this.groupBox2.Controls.Add(this.txtNameSearch);
+            this.groupBox2.Controls.Add(this.ddlTypeSearch);
+            this.groupBox2.Controls.Add(this.btnSearchAll);
+            this.groupBox2.Controls.Add(this.txtTitleSearch);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
@@ -117,28 +164,32 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // btnShowAll
+            // ddlTypeSearch
             // 
-            this.btnShowAll.Location = new System.Drawing.Point(96, 109);
-            this.btnShowAll.Name = "btnShowAll";
-            this.btnShowAll.Size = new System.Drawing.Size(167, 32);
-            this.btnShowAll.TabIndex = 5;
-            this.btnShowAll.Text = "显示全部";
-            this.btnShowAll.UseVisualStyleBackColor = true;
+            this.ddlTypeSearch.FormattingEnabled = true;
+            this.ddlTypeSearch.Location = new System.Drawing.Point(97, 78);
+            this.ddlTypeSearch.Name = "ddlTypeSearch";
+            this.ddlTypeSearch.Size = new System.Drawing.Size(166, 24);
+            this.ddlTypeSearch.TabIndex = 6;
+            this.ddlTypeSearch.SelectedIndexChanged += new System.EventHandler(this.ddlTypeSearch_SelectedIndexChanged);
             // 
-            // txtTypeSearch
+            // btnSearchAll
             // 
-            this.txtTypeSearch.Location = new System.Drawing.Point(96, 81);
-            this.txtTypeSearch.Name = "txtTypeSearch";
-            this.txtTypeSearch.Size = new System.Drawing.Size(167, 22);
-            this.txtTypeSearch.TabIndex = 4;
+            this.btnSearchAll.Location = new System.Drawing.Point(96, 109);
+            this.btnSearchAll.Name = "btnSearchAll";
+            this.btnSearchAll.Size = new System.Drawing.Size(167, 32);
+            this.btnSearchAll.TabIndex = 5;
+            this.btnSearchAll.Text = "显示全部";
+            this.btnSearchAll.UseVisualStyleBackColor = true;
+            this.btnSearchAll.Click += new System.EventHandler(this.btnSearchAll_Click);
             // 
-            // txtNameSearch
+            // txtTitleSearch
             // 
-            this.txtNameSearch.Location = new System.Drawing.Point(96, 42);
-            this.txtNameSearch.Name = "txtNameSearch";
-            this.txtNameSearch.Size = new System.Drawing.Size(167, 22);
-            this.txtNameSearch.TabIndex = 3;
+            this.txtTitleSearch.Location = new System.Drawing.Point(96, 42);
+            this.txtTitleSearch.Name = "txtTitleSearch";
+            this.txtTitleSearch.Size = new System.Drawing.Size(167, 22);
+            this.txtTitleSearch.TabIndex = 3;
+            this.txtTitleSearch.Leave += new System.EventHandler(this.txtTitleSearch_Leave);
             // 
             // label4
             // 
@@ -204,19 +255,21 @@
             // 
             this.btnCancle.Location = new System.Drawing.Point(182, 271);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(75, 23);
+            this.btnCancle.Size = new System.Drawing.Size(75, 28);
             this.btnCancle.TabIndex = 8;
             this.btnCancle.Text = "取消";
             this.btnCancle.UseVisualStyleBackColor = true;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(78, 272);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 27);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "添加";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -255,6 +308,7 @@
             this.txtNameAdd.Name = "txtNameAdd";
             this.txtNameAdd.Size = new System.Drawing.Size(167, 22);
             this.txtNameAdd.TabIndex = 4;
+            this.txtNameAdd.Leave += new System.EventHandler(this.txtNameAdd_Leave);
             // 
             // txtIdAdd
             // 
@@ -262,6 +316,7 @@
             this.txtIdAdd.Name = "txtIdAdd";
             this.txtIdAdd.Size = new System.Drawing.Size(167, 22);
             this.txtIdAdd.TabIndex = 4;
+            this.txtIdAdd.Text = "添加时无编号";
             // 
             // label10
             // 
@@ -317,51 +372,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "添加\\修改";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "DId";
-            this.Column1.HeaderText = "编号";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "DTitle";
-            this.Column2.HeaderText = "名称";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "DTypeTitle";
-            this.Column3.HeaderText = "分类";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DPrice";
-            this.Column4.HeaderText = "价格";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "DChar";
-            this.Column5.HeaderText = "拼音";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
-            // 
             // FormDishInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,9 +401,8 @@
         private System.Windows.Forms.DataGridView dgvList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnShowAll;
-        private System.Windows.Forms.TextBox txtTypeSearch;
-        private System.Windows.Forms.TextBox txtNameSearch;
+        private System.Windows.Forms.Button btnSearchAll;
+        private System.Windows.Forms.TextBox txtTitleSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -418,5 +427,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ComboBox ddlTypeSearch;
     }
 }
