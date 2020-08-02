@@ -164,5 +164,23 @@ namespace CaterUI
                 LoadList();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgvList.SelectedRows[0].Cells[0].Value);
+            DialogResult result = MessageBox.Show("确定要删除吗？", "提示", MessageBoxButtons.OKCancel);
+            if (result==DialogResult.OK)
+            {
+                if (diBll.Remove(id))
+                {
+                    LoadList();
+                }
+                else
+                {
+                    MessageBox.Show("删除失败，请稍后重试");
+                }
+            }
+
+        }
     }
 }

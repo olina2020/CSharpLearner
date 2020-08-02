@@ -26,5 +26,9 @@ namespace CaterBll
         {
             return diDal.Update(di) > 0;
         }
+        public bool Remove(int id)
+        {
+            return diDal.Delete(id) > 0;
+        }
     }
 }

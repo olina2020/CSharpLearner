@@ -48,3 +48,5 @@ C:\Codes\CSharpLearner\ItcastCater724\CaterUI\bin\Debug\ChnCharInfo.dll
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\bin\Debug\ChnCharInfo.xml
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormDishInfo.resources
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormDishTypeInfo.resources
+C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormHallInfo.resources
+C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormTableInfo.resources

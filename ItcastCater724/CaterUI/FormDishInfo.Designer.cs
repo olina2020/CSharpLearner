@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAddType = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAddType = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -243,6 +243,16 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
+            // btnAddType
+            // 
+            this.btnAddType.Location = new System.Drawing.Point(95, 145);
+            this.btnAddType.Name = "btnAddType";
+            this.btnAddType.Size = new System.Drawing.Size(167, 23);
+            this.btnAddType.TabIndex = 10;
+            this.btnAddType.Text = "分类管理";
+            this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -281,6 +291,7 @@
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "删除选中的行数据";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbbType
             // 
@@ -288,7 +299,7 @@
             this.cbbType.Location = new System.Drawing.Point(96, 104);
             this.cbbType.Name = "cbbType";
             this.cbbType.Size = new System.Drawing.Size(167, 24);
-            this.cbbType.TabIndex = 5;          
+            this.cbbType.TabIndex = 5;
             // 
             // txtPinyin
             // 
@@ -373,16 +384,6 @@
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "添加\\修改";
-            // 
-            // btnAddType
-            // 
-            this.btnAddType.Location = new System.Drawing.Point(95, 145);
-            this.btnAddType.Name = "btnAddType";
-            this.btnAddType.Size = new System.Drawing.Size(167, 23);
-            this.btnAddType.TabIndex = 10;
-            this.btnAddType.Text = "分类管理";
-            this.btnAddType.UseVisualStyleBackColor = true;
-            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
             // 
             // FormDishInfo
             // 

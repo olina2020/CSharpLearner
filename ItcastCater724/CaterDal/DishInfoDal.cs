@@ -76,6 +76,13 @@ namespace CaterDal
             };
             return SqliteHelper.ExecuteNonQuery(sql, ps);
         }
+        //删除
+        public int Delete(int id)
+        {
+            string sql = "update DishInfo set dIsDelete=1 where did=@id";
+            SQLiteParameter p = new SQLiteParameter("@id", id);
+            return SqliteHelper.ExecuteNonQuery(sql, p);
+        }
 
     }
 }
