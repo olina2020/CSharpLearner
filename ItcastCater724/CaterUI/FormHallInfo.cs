@@ -20,6 +20,7 @@ namespace CaterUI
             hiBll = new HallInfoBll();
         }
         private HallInfoBll hiBll;
+        public event Action MyUpdateForm;//自定义事件        
         private void FormHallInfo_Load(object sender, EventArgs e)
         {
             LoadList();
@@ -63,6 +64,8 @@ namespace CaterUI
             txtId.Text = "添加时无编号";
             txtTitle.Text = "";
             btnSave.Text = "添加";
+            //调用自定义事件，事件中的自定义方法都会被执行
+            MyUpdateForm();
         }
 
         private void btnCancle_Click(object sender, EventArgs e)
@@ -92,6 +95,8 @@ namespace CaterUI
             {
                 LoadList();
             }
+            //调用自定义事件，事件中的方法都会被执行
+            MyUpdateForm();
         }
     }
 }

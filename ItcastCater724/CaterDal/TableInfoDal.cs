@@ -36,7 +36,7 @@ namespace CaterDal
                 {
                     TId=Convert.ToInt32(row["tid"]),
                     TTitle=row["ttitle"].ToString(),
-                    HallTitle=row["htitle"].ToString(),
+                    HallTitle=row["htitle"].ToString(),//datagridview显示厅包项
                     THallId=Convert.ToInt32(row["thallId"]),
                     TIsFree=Convert.ToBoolean(row["tIsFree"])
                 });

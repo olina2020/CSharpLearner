@@ -180,5 +180,13 @@ namespace CaterUI
                 MessageBox.Show("删除失败，请稍后重试");
             }
         }
+
+        private void btnAddType_Click(object sender, EventArgs e)
+        {
+            FormHallInfo formHallInfo = new FormHallInfo();
+            formHallInfo.MyUpdateForm += LoadSearchList;
+            formHallInfo.MyUpdateForm += LoadList;
+            formHallInfo.Show();
+        }
     }
 }

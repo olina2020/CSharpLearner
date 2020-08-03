@@ -41,6 +41,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.rbUnFree = new System.Windows.Forms.RadioButton();
+            this.rbFree = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.ddlFreeSearch = new System.Windows.Forms.ComboBox();
             this.btnSearchAll = new System.Windows.Forms.Button();
@@ -48,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ddlHallSearch = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,10 +59,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ddlHallSearch = new System.Windows.Forms.ComboBox();
-            this.rbFree = new System.Windows.Forms.RadioButton();
-            this.rbUnFree = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -73,6 +73,7 @@
             this.btnAddType.TabIndex = 10;
             this.btnAddType.Text = "厅包管理";
             this.btnAddType.UseVisualStyleBackColor = true;
+            this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
             // 
             // label11
             // 
@@ -197,6 +198,38 @@
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AllowDrop = true;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(0, 186);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(288, 17);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "如果是包间则填写名称如果是厅包则填写号码";
+            // 
+            // rbUnFree
+            // 
+            this.rbUnFree.AutoSize = true;
+            this.rbUnFree.Location = new System.Drawing.Point(172, 239);
+            this.rbUnFree.Name = "rbUnFree";
+            this.rbUnFree.Size = new System.Drawing.Size(71, 21);
+            this.rbUnFree.TabIndex = 12;
+            this.rbUnFree.Text = "使用中";
+            this.rbUnFree.UseVisualStyleBackColor = true;
+            // 
+            // rbFree
+            // 
+            this.rbFree.AutoSize = true;
+            this.rbFree.Checked = true;
+            this.rbFree.Location = new System.Drawing.Point(92, 239);
+            this.rbFree.Name = "rbFree";
+            this.rbFree.Size = new System.Drawing.Size(57, 21);
+            this.rbFree.TabIndex = 11;
+            this.rbFree.TabStop = true;
+            this.rbFree.Text = "空闲";
+            this.rbFree.UseVisualStyleBackColor = true;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -266,6 +299,15 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
+            // ddlHallSearch
+            // 
+            this.ddlHallSearch.FormattingEnabled = true;
+            this.ddlHallSearch.Location = new System.Drawing.Point(96, 35);
+            this.ddlHallSearch.Name = "ddlHallSearch";
+            this.ddlHallSearch.Size = new System.Drawing.Size(166, 24);
+            this.ddlHallSearch.TabIndex = 6;
+            this.ddlHallSearch.SelectedIndexChanged += new System.EventHandler(this.ddlHallSearch_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -326,7 +368,7 @@
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "THallId";
+            this.Column3.DataPropertyName = "HallTitle";
             this.Column3.HeaderText = "厅包";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -341,47 +383,6 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
-            // 
-            // ddlHallSearch
-            // 
-            this.ddlHallSearch.FormattingEnabled = true;
-            this.ddlHallSearch.Location = new System.Drawing.Point(96, 35);
-            this.ddlHallSearch.Name = "ddlHallSearch";
-            this.ddlHallSearch.Size = new System.Drawing.Size(166, 24);
-            this.ddlHallSearch.TabIndex = 6;
-            this.ddlHallSearch.SelectedIndexChanged += new System.EventHandler(this.ddlHallSearch_SelectedIndexChanged);
-            // 
-            // rbFree
-            // 
-            this.rbFree.AutoSize = true;
-            this.rbFree.Checked = true;
-            this.rbFree.Location = new System.Drawing.Point(92, 239);
-            this.rbFree.Name = "rbFree";
-            this.rbFree.Size = new System.Drawing.Size(57, 21);
-            this.rbFree.TabIndex = 11;
-            this.rbFree.TabStop = true;
-            this.rbFree.Text = "空闲";
-            this.rbFree.UseVisualStyleBackColor = true;
-            // 
-            // rbUnFree
-            // 
-            this.rbUnFree.AutoSize = true;
-            this.rbUnFree.Location = new System.Drawing.Point(172, 239);
-            this.rbUnFree.Name = "rbUnFree";
-            this.rbUnFree.Size = new System.Drawing.Size(71, 21);
-            this.rbUnFree.TabIndex = 12;
-            this.rbUnFree.Text = "使用中";
-            this.rbUnFree.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AllowDrop = true;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(0, 186);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(288, 17);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "如果是包间则填写名称如果是厅包则填写号码";
             // 
             // FormTableInfo
             // 
@@ -431,13 +432,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.ComboBox ddlHallSearch;
         private System.Windows.Forms.RadioButton rbUnFree;
         private System.Windows.Forms.RadioButton rbFree;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
