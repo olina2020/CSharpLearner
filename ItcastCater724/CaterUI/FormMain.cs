@@ -97,6 +97,9 @@ namespace CaterUI
             oiBll.KaiDan(tableId);
             //3.更新餐桌图标，开单后由空闲改为使用中
             lv1.SelectedItems[0].ImageIndex = 1;
+            //4.打开点菜窗体
+            FormOrderDish formOrderDish = new FormOrderDish();
+            formOrderDish.Show();
         }
 
         private void LvTableInfo_DoubleClick(object sender, EventArgs e)

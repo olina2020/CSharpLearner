@@ -50,3 +50,4 @@ C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormDishInfo.res
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormDishTypeInfo.resources
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormHallInfo.resources
 C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormTableInfo.resources
+C:\Codes\CSharpLearner\ItcastCater724\CaterUI\obj\Debug\CaterUI.FormOrderDish.resources
