@@ -10,9 +10,15 @@ namespace CaterBll
     public partial class OrderInfoBll
     {
         private OrderInfoDal oiDal = new OrderInfoDal();
-        public bool KaiDan(int tableId)
+        public int KaiDan(int tableId)
         {
-            return oiDal.CreateOrder(tableId) > 0;
+            return oiDal.CreateOrder(tableId);
         }
+        //点菜
+        public bool DianCai(int orderId, int dishId)
+        {
+            return oiDal.DianCai(orderId, dishId) > 0;
+        }
+
     }
 }

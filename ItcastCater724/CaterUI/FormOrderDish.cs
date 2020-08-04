@@ -66,5 +66,22 @@ namespace CaterUI
         {
             LoadDishInfo();
         }
+
+        private void dgvAllDish_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //点菜
+            //订单编号
+            int orderId = Convert.ToInt32(this.Tag);
+
+            //菜单编号
+            int dishId = Convert.ToInt32(dgvAllDish.Rows[e.RowIndex].Cells[0].Value);
+            //执行点菜操作
+            OrderInfoBll oiBll = new OrderInfoBll();
+            if (oiBll.DianCai(orderId, dishId))
+            {
+                //点菜成功
+            } 
+
+        }
     }
 }

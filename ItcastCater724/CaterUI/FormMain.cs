@@ -88,17 +88,29 @@ namespace CaterUI
 
         private void LvTableInfo_DoubleClick1(object sender, EventArgs e)
         {
-            //获取餐桌编号
+            //获取被点的餐桌项
             var lv1 = sender as ListView;
-            int tableId = Convert.ToInt32(lv1.SelectedItems[0].Tag);
-            //1.开单，向orderinfo表插入数据
-            //2.修改餐桌状态为使用
-            OrderInfoBll oiBll = new OrderInfoBll();
-            oiBll.KaiDan(tableId);
-            //3.更新餐桌图标，开单后由空闲改为使用中
-            lv1.SelectedItems[0].ImageIndex = 1;
+            var lvi = lv1.SelectedItems[0];
+            if (lvi.ImageIndex==0)
+            {
+                //当前餐桌空闲，则开单
+                //拿到选中的桌
+                int tableId = Convert.ToInt32(lvi.Tag);
+                //1.开单，向orderinfo表插入数据
+                //2.修改餐桌状态为使用
+                OrderInfoBll oiBll = new OrderInfoBll();
+                int orderId= oiBll.KaiDan(tableId);//获得订单号
+                lvi.Tag = orderId;
+                //3.更新餐桌图标，开单后由空闲改为使用中
+                lv1.SelectedItems[0].ImageIndex = 1;
+            }
+            else
+            {
+                //当前餐桌已经占用，则进行点菜操作
+            }
             //4.打开点菜窗体
             FormOrderDish formOrderDish = new FormOrderDish();
+            formOrderDish.Tag = lvi.Tag;
             formOrderDish.Show();
         }
 

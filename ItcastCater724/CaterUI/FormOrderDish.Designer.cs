@@ -89,6 +89,7 @@
             this.dgvAllDish.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllDish.Size = new System.Drawing.Size(678, 509);
             this.dgvAllDish.TabIndex = 5;
+            this.dgvAllDish.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllDish_CellDoubleClick);
             // 
             // Column1
             // 
