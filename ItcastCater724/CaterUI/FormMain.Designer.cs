@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuManagerInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMemberInfo = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,6 +37,8 @@
             this.menuDishInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQuit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tcHallInfo = new System.Windows.Forms.TabControl();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +76,7 @@
             this.menuMemberInfo.Name = "menuMemberInfo";
             this.menuMemberInfo.Size = new System.Drawing.Size(78, 68);
             this.menuMemberInfo.Text = "toolStripMenuItem2";
+            this.menuMemberInfo.Click += new System.EventHandler(this.menuMemberInfo_Click);
             // 
             // menuTableInfo
             // 
@@ -80,6 +85,7 @@
             this.menuTableInfo.Name = "menuTableInfo";
             this.menuTableInfo.Size = new System.Drawing.Size(78, 68);
             this.menuTableInfo.Text = "toolStripMenuItem3";
+            this.menuTableInfo.Click += new System.EventHandler(this.menuTableInfo_Click);
             // 
             // menuDishInfo
             // 
@@ -88,6 +94,7 @@
             this.menuDishInfo.Name = "menuDishInfo";
             this.menuDishInfo.Size = new System.Drawing.Size(78, 68);
             this.menuDishInfo.Text = "toolStripMenuItem4";
+            this.menuDishInfo.Click += new System.EventHandler(this.menuDishInfo_Click);
             // 
             // menuOrder
             // 
@@ -106,16 +113,32 @@
             this.menuQuit.Text = "toolStripMenuItem6";
             this.menuQuit.Click += new System.EventHandler(this.menuQuit_Click);
             // 
+            // tcHallInfo
+            // 
+            this.tcHallInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcHallInfo.Location = new System.Drawing.Point(0, 72);
+            this.tcHallInfo.Name = "tcHallInfo";
+            this.tcHallInfo.SelectedIndex = 0;
+            this.tcHallInfo.Size = new System.Drawing.Size(953, 410);
+            this.tcHallInfo.TabIndex = 1;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "desk1.png");
+            this.imageList1.Images.SetKeyName(1, "desk2.png");
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 482);
+            this.Controls.Add(this.tcHallInfo);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "餐饮管理";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -134,5 +157,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuDishInfo;
         private System.Windows.Forms.ToolStripMenuItem menuOrder;
         private System.Windows.Forms.ToolStripMenuItem menuQuit;
+        private System.Windows.Forms.TabControl tcHallInfo;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

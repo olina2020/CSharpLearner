@@ -19,6 +19,7 @@ namespace CaterUI
             InitializeComponent();
         }
         private TableInfoBll tiBll = new TableInfoBll();
+        public event Action Refresh;
 
         private void FormTableInfo_Load(object sender, EventArgs e)
         {
@@ -133,7 +134,9 @@ namespace CaterUI
             txtNameAdd.Text = "";
             ddlHallAdd.SelectedIndex = 0;
             rbFree.Checked = true;
-            btnSave.Text = "添加";            
+            btnSave.Text = "添加";
+            //调用刷新事件
+            Refresh();
         }
         private void btnCancle_Click(object sender, EventArgs e)
         {
@@ -179,6 +182,7 @@ namespace CaterUI
             {
                 MessageBox.Show("删除失败，请稍后重试");
             }
+            Refresh();
         }
 
         private void btnAddType_Click(object sender, EventArgs e)

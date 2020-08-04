@@ -21,13 +21,17 @@ namespace CaterBll
         {
             return tiDal.Insert(ti) > 0;
         }
+        //修改
         public bool Edit(TableInfo ti)
         {
             return tiDal.Update(ti) > 0;
         }
+        //删除
         public bool Remove(int id)
         {
             return tiDal.Delete(id) > 0;
         }
+
+
     }
 }

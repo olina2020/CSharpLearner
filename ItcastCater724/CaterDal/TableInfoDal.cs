@@ -75,5 +75,16 @@ namespace CaterDal
             SQLiteParameter p = new SQLiteParameter("@id", id);
             return SqliteHelper.ExecuteNonQuery(sql, p);
         }
+        //因为开单，改变餐桌状态
+        //public int SetState(int tableId, bool isFree)
+        //{
+        //    string sql = "update tableinfo set tIsFree=@isfree where tid=@tid";
+        //    SQLiteParameter[] ps =
+        //    {
+        //        new SQLiteParameter("@tid", tableId),
+        //        new SQLiteParameter("@isfree", isFree?1:0)
+        //    };
+        //    return SqliteHelper.ExecuteNonQuery(sql, ps);
+        //}
     }
 }

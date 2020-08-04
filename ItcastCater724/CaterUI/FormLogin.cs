@@ -38,7 +38,7 @@ namespace CaterUI
                     FormMain main = new FormMain();
                     main.Tag = type;//将员工级别传递过去
                     main.Show();
-                    //讲登录窗体隐藏
+                    //将登录窗体隐藏
                     this.Hide();
                     break;
                 case LoginState.NameError:
