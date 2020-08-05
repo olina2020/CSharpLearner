@@ -24,6 +24,13 @@ namespace CaterBll
         {
             return oiDal.DianCai(orderId, dishId) > 0;
         }
+
+        //更改菜品的数量
+        public bool UpdateCountByOid(int oid, int count)
+        {
+            return oiDal.UpdateCountByOId(oid, count) > 0;
+        }
+
         //在右侧的datagridview里显示点菜的数据
         public List<OrderDetailInfo> GetDetailList(int orderId)
         {

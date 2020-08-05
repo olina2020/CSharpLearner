@@ -82,13 +82,29 @@ namespace CaterUI
 
             //菜单编号
             int dishId = Convert.ToInt32(dgvAllDish.Rows[e.RowIndex].Cells[0].Value);
-            //执行点菜操作
             
+            //执行点菜操作            
             if (oiBll.DianCai(orderId, dishId))
             {
                 //点菜成功
                 LoadDetailList();
             } 
+
+        }
+        //右侧，单元格更改菜品数量       
+        private void dgvOrderDetail_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)//停止数量列的编辑时，才会执行以下更改
+            {
+                //获取修改行
+                var row = dgvOrderDetail.Rows[e.RowIndex];
+                //获取oid
+                int oid = Convert.ToInt32(row.Cells[0].Value);
+                //获取数量
+                int count = Convert.ToInt32(row.Cells[2].Value);
+                //更新操作
+                oiBll.UpdateCountByOid(oid, count);
+            }
 
         }
     }

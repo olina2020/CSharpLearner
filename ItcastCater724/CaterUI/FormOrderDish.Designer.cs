@@ -214,11 +214,11 @@
             this.Column9});
             this.dgvOrderDetail.Location = new System.Drawing.Point(6, 72);
             this.dgvOrderDetail.Name = "dgvOrderDetail";
-            this.dgvOrderDetail.ReadOnly = true;
             this.dgvOrderDetail.RowHeadersWidth = 51;
             this.dgvOrderDetail.RowTemplate.Height = 24;
             this.dgvOrderDetail.Size = new System.Drawing.Size(564, 509);
             this.dgvOrderDetail.TabIndex = 6;
+            this.dgvOrderDetail.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderDetail_CellEndEdit);
             // 
             // button1
             // 
@@ -271,7 +271,6 @@
             this.Column8.HeaderText = "数量";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             this.Column8.Width = 125;
             // 
             // Column9
