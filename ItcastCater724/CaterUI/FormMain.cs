@@ -17,7 +17,7 @@ namespace CaterUI
         {
             InitializeComponent();
         }
-
+        OrderInfoBll oiBll = new OrderInfoBll();
         private void menuQuit_Click(object sender, EventArgs e)
         {
             //点击Quit按钮时
@@ -91,14 +91,13 @@ namespace CaterUI
             //获取被点的餐桌项
             var lv1 = sender as ListView;
             var lvi = lv1.SelectedItems[0];
+            //获取餐桌编号，拿到选中的桌
+            int tableId = Convert.ToInt32(lvi.Tag);
             if (lvi.ImageIndex==0)
             {
-                //当前餐桌空闲，则开单
-                //拿到选中的桌
-                int tableId = Convert.ToInt32(lvi.Tag);
+                //当前餐桌空闲，则开单               
                 //1.开单，向orderinfo表插入数据
-                //2.修改餐桌状态为使用
-                OrderInfoBll oiBll = new OrderInfoBll();
+                //2.修改餐桌状态为使用               
                 int orderId= oiBll.KaiDan(tableId);//获得订单号
                 lvi.Tag = orderId;
                 //3.更新餐桌图标，开单后由空闲改为使用中
@@ -107,6 +106,7 @@ namespace CaterUI
             else
             {
                 //当前餐桌已经占用，则进行点菜操作
+                lvi.Tag = oiBll.GetOrderIdByTableId(tableId);
             }
             //4.打开点菜窗体
             FormOrderDish formOrderDish = new FormOrderDish();

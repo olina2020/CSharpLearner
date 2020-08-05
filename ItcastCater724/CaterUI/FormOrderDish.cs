@@ -18,11 +18,12 @@ namespace CaterUI
         {
             InitializeComponent();
         }
-
+        OrderInfoBll oiBll = new OrderInfoBll();
         private void FormOrderDish_Load(object sender, EventArgs e)
         {
             LoadDishType();
             LoadDishInfo();
+            LoadDetailList();
         }
         private void LoadDishInfo()
         {
@@ -56,6 +57,12 @@ namespace CaterUI
             ddlType.DisplayMember = "dtitle";
             ddlType.DataSource = list;
         }
+        private void LoadDetailList()
+        {
+            int orderId = Convert.ToInt32(this.Tag);
+            dgvOrderDetail.AutoGenerateColumns = false;
+            dgvOrderDetail.DataSource = oiBll.GetDetailList(orderId);
+        }
 
         private void txtTitle_TextChanged(object sender, EventArgs e)
         {
@@ -76,10 +83,11 @@ namespace CaterUI
             //菜单编号
             int dishId = Convert.ToInt32(dgvAllDish.Rows[e.RowIndex].Cells[0].Value);
             //执行点菜操作
-            OrderInfoBll oiBll = new OrderInfoBll();
+            
             if (oiBll.DianCai(orderId, dishId))
             {
                 //点菜成功
+                LoadDetailList();
             } 
 
         }
